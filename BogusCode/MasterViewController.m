@@ -2,87 +2,85 @@
 //  MasterViewController.m
 //  BogusCode
 //
-//  Created by Huebner, Rob on 6/26/15.
+//  Created by Johnny Blockingcall on 6/26/15.
 //  Copyright (c) 2015 Vimeo. All rights reserved.
 //
 
-#import "MasterViewController.h"
-#import "DetailViewController.h"
+#define kOneConstant 1
 
-@interface MasterViewController ()
+#import "MasterViewController.h"
+
+@interface MasterViewController () <NSURLConnectionDelegate>
 
 @property NSMutableArray *objects;
+@property NSMutableArray *pictures;
+@property UITableView *tableView;
+
 @end
 
 @implementation MasterViewController
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 100;
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
-
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (void)insertNewObject:(id)sender {
-    if (!self.objects) {
-        self.objects = [[NSMutableArray alloc] init];
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithFrame:self.view.bounds];
+    
+    @try
+    {
+        NSObject *object = [self.objects objectAtIndex:indexPath.row];
+        cell.textLabel.text = [object valueForKey:@"name"];
+        
+        NSString *url = [[[[object valueForKey:@"pictures"] valueForKey:@"sizes"] objectAtIndex:0] valueForKey:@"link"];
+        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:url]]];
+        cell.image = image;
     }
-    [self.objects insertObject:[NSDate date] atIndex:0];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-}
-
-#pragma mark - Segues
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString:@"showDetail"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = self.objects[indexPath.row];
-        [[segue destinationViewController] setDetailItem:object];
+    @catch (NSException *exception)
+    {
+        cell.text = @"no more videos, scroll up...";
     }
-}
-
-#pragma mark - Table View
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.objects.count;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-
-    NSDate *object = self.objects[indexPath.row];
-    cell.textLabel.text = [object description];
+    
     return cell;
 }
 
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+- (void)viewDidAppear:(BOOL)animated
+{
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://api.vimeo.com/channels/staffpicks/videos"]];
+    [request setValue:@"bearer b8e31bd89ba1ee093dc6ab0f863db1bd" forHTTPHeaderField:@"Authorization"];
+    [request setHTTPMethod:@"GET"];
+    NSURLConnection *connection = [NSURLConnection connectionWithRequest:request delegate:self];
+    request.cachePolicy = NSURLRequestReloadIgnoringCacheData;
+    NSData *response = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+    NSString *responseString = [NSString stringWithCString:[response bytes] encoding:NSUTF8StringEncoding];
+    NSDictionary *resDict = [NSJSONSerialization JSONObjectWithData:response options:0 error:nil];
+    self.objects = resDict[@"data"];
+    
+    NSLog(@"found %li objects", resDict.count);
+    
+    [self.tableView reloadData];
 }
 
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [self.objects removeObjectAtIndex:indexPath.row];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-    }
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return kOneConstant;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    self.tableView = tableView;
+    
+    return 1000;
+}
+
+- (void)viewDidLoad
+{
+    self.objects = [NSMutableArray arrayWithCapacity:1000];
+    self.pictures = [NSMutableArray arrayWithCapacity:1000];
+    
+    self.navigationItem.title = @"Vimeo Staff Picks";
 }
 
 @end

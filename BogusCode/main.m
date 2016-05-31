@@ -2,7 +2,7 @@
 //  main.m
 //  BogusCode
 //
-//  Created by Huebner, Rob on 6/26/15.
+//  Created by Johnny Blockingcall on 6/26/15.
 //  Copyright (c) 2015 Vimeo. All rights reserved.
 //
 
