@@ -12,7 +12,7 @@
 
 #import "MasterViewController.h"
 
-@interface MasterViewController () <NSURLConnectionDelegate>
+@interface MasterViewController () <NSURLConnectionDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @property NSMutableArray *objects;
 @property NSMutableArray *pictures;
@@ -29,7 +29,7 @@
     self.objects = [NSMutableArray arrayWithCapacity:1000];
     self.pictures = [NSMutableArray arrayWithCapacity:1000];
     
-    [self setupNavigationBarUI]; 
+    [self setupNavigationBarUI];
 }
 
 
@@ -38,8 +38,10 @@
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://api.vimeo.com/channels/staffpicks/videos"]];
     [request setValue:@"bearer b8e31bd89ba1ee093dc6ab0f863db1bd" forHTTPHeaderField:@"Authorization"];
     [request setHTTPMethod:@"GET"];
+    
     NSURLConnection *connection = [NSURLConnection connectionWithRequest:request delegate:self];
     request.cachePolicy = NSURLRequestReloadIgnoringCacheData;
+    
     NSData *response = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
     NSString *responseString = [NSString stringWithCString:[response bytes] encoding:NSUTF8StringEncoding];
     NSDictionary *resDict = [NSJSONSerialization JSONObjectWithData:response options:0 error:nil];
@@ -53,7 +55,6 @@
 
 - (void)setupNavigationBarUI
 {
-    
     self.navigationItem.title = @"Vimeo Staff Picks";
  
     // Vimeo brand color: http://brandcolors.net/ hex value: 1AB7EA hex to rgb: http://hex.colorrrs.com/ rgb(26,183,234)
@@ -70,6 +71,12 @@
 #pragma mark TableViewDelegate methods
 
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 100;
+}
+
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return kOneConstant;
@@ -84,12 +91,6 @@
 }
 
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 100;
-}
-
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [[UITableViewCell alloc] initWithFrame:self.view.bounds];
@@ -101,11 +102,11 @@
         
         NSString *url = [[[[object valueForKey:@"pictures"] valueForKey:@"sizes"] objectAtIndex:0] valueForKey:@"link"];
         UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:url]]];
-        cell.image = image;
+        cell.imageView.image = image;
     }
     @catch (NSException *exception)
     {
-        cell.text = @"no more videos, scroll up...";
+        cell.textLabel.text = @"no more videos, scroll up...";
     }
     
     return cell;

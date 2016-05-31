@@ -14,6 +14,9 @@
 		01BE53261B3DA61500A89EF1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01BE53251B3DA61500A89EF1 /* Images.xcassets */; };
 		01BE53291B3DA61500A89EF1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01BE53271B3DA61500A89EF1 /* LaunchScreen.xib */; };
 		01BE53351B3DA61500A89EF1 /* BogusCodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BE53341B3DA61500A89EF1 /* BogusCodeTests.m */; };
+		D9DDB5701CFE3A640010FEA4 /* VSPVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = D9DDB56F1CFE3A640010FEA4 /* VSPVideo.m */; };
+		D9DDB5741CFE3C250010FEA4 /* VSPAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D9DDB5731CFE3C250010FEA4 /* VSPAPIManager.m */; };
+		D9DDB5781CFE3C570010FEA4 /* NSPNetworkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D9DDB5771CFE3C570010FEA4 /* NSPNetworkModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,12 @@
 		01BE532E1B3DA61500A89EF1 /* BogusCodeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BogusCodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01BE53331B3DA61500A89EF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01BE53341B3DA61500A89EF1 /* BogusCodeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BogusCodeTests.m; sourceTree = "<group>"; };
+		D9DDB56E1CFE3A640010FEA4 /* VSPVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSPVideo.h; sourceTree = "<group>"; };
+		D9DDB56F1CFE3A640010FEA4 /* VSPVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSPVideo.m; sourceTree = "<group>"; };
+		D9DDB5721CFE3C250010FEA4 /* VSPAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSPAPIManager.h; sourceTree = "<group>"; };
+		D9DDB5731CFE3C250010FEA4 /* VSPAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSPAPIManager.m; sourceTree = "<group>"; };
+		D9DDB5761CFE3C570010FEA4 /* NSPNetworkModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSPNetworkModel.h; sourceTree = "<group>"; };
+		D9DDB5771CFE3C570010FEA4 /* NSPNetworkModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSPNetworkModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +92,9 @@
 			children = (
 				01BE53191B3DA61500A89EF1 /* AppDelegate.h */,
 				01BE531A1B3DA61500A89EF1 /* AppDelegate.m */,
-				01BE531C1B3DA61500A89EF1 /* MasterViewController.h */,
-				01BE531D1B3DA61500A89EF1 /* MasterViewController.m */,
+				D9DDB5711CFE3AC30010FEA4 /* Model */,
+				D9DDB5751CFE3C2A0010FEA4 /* Networking */,
+				D9DDB56D1CFE3A320010FEA4 /* ViewControllers */,
 				01BE53221B3DA61500A89EF1 /* Main.storyboard */,
 				01BE53251B3DA61500A89EF1 /* Images.xcassets */,
 				01BE53271B3DA61500A89EF1 /* LaunchScreen.xib */,
@@ -117,6 +127,35 @@
 				01BE53331B3DA61500A89EF1 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D9DDB56D1CFE3A320010FEA4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				01BE531C1B3DA61500A89EF1 /* MasterViewController.h */,
+				01BE531D1B3DA61500A89EF1 /* MasterViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D9DDB5711CFE3AC30010FEA4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D9DDB56E1CFE3A640010FEA4 /* VSPVideo.h */,
+				D9DDB56F1CFE3A640010FEA4 /* VSPVideo.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		D9DDB5751CFE3C2A0010FEA4 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D9DDB5721CFE3C250010FEA4 /* VSPAPIManager.h */,
+				D9DDB5731CFE3C250010FEA4 /* VSPAPIManager.m */,
+				D9DDB5761CFE3C570010FEA4 /* NSPNetworkModel.h */,
+				D9DDB5771CFE3C570010FEA4 /* NSPNetworkModel.m */,
+			);
+			name = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,7 +259,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				01BE531B1B3DA61500A89EF1 /* AppDelegate.m in Sources */,
+				D9DDB5701CFE3A640010FEA4 /* VSPVideo.m in Sources */,
+				D9DDB5741CFE3C250010FEA4 /* VSPAPIManager.m in Sources */,
 				01BE531E1B3DA61500A89EF1 /* MasterViewController.m in Sources */,
+				D9DDB5781CFE3C570010FEA4 /* NSPNetworkModel.m in Sources */,
 				01BE53181B3DA61500A89EF1 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,6 +460,7 @@
 				01BE533A1B3DA61500A89EF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		01BE533B1B3DA61500A89EF1 /* Build configuration list for PBXNativeTarget "BogusCodeTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +469,7 @@
 				01BE533D1B3DA61500A89EF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
