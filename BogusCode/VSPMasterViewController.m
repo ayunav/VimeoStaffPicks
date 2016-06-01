@@ -32,7 +32,6 @@
     self.offset = 1;
     
     [self setupNavigationBarUI];
-    [self addUIRefreshControlToTableView]; 
     [self fetchVideosWithOffset:self.offset];
 }
 
@@ -103,29 +102,11 @@
         cell.textLabel.text = @"no more videos, scroll up...";
     }
     
-    if (indexPath.row == self.videos.count) {
-        [self fetchVideosWithOffset:self.offset++];
+    if (indexPath.row == self.videos.count - 1) {
+        [self fetchVideosWithOffset:++self.offset];
     }
 
     return cell;
-}
-
-
-#pragma mark - Pull Down To Refresh methods
-
-- (void)addUIRefreshControlToTableView
-{
-    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
-    [refreshControl addTarget:self action:@selector(pullToRefresh:) forControlEvents:UIControlEventValueChanged];
-    [self.tableView addSubview:refreshControl];
-    self.tableView.alwaysBounceVertical = YES;
-}
-
-
-- (void)pullToRefresh:(UIRefreshControl *)sender
-{
-    [self fetchVideosWithOffset:1];
-    [sender endRefreshing];
 }
 
 
