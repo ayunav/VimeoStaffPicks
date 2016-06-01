@@ -11,7 +11,7 @@
 @interface VSPVideo : NSObject
 
 @property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSURL *imageURLlink;
+@property (nonatomic, strong) NSString *imageURLlink;
 @property (nonatomic, strong) NSString *videoDescription;
 
 

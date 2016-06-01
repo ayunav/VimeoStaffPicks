@@ -1,5 +1,5 @@
 //
-//  MasterViewController.h
+//  VSPMasterViewController.h
 //  BogusCode
 //
 //  Created by Johnny Blockingcall on 6/26/15.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MasterViewController : UITableViewController
+@interface VSPMasterViewController : UITableViewController
 
 @end
 

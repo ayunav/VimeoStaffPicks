@@ -9,14 +9,14 @@
 /* Begin PBXBuildFile section */
 		01BE53181B3DA61500A89EF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BE53171B3DA61500A89EF1 /* main.m */; };
 		01BE531B1B3DA61500A89EF1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BE531A1B3DA61500A89EF1 /* AppDelegate.m */; };
-		01BE531E1B3DA61500A89EF1 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BE531D1B3DA61500A89EF1 /* MasterViewController.m */; };
+		01BE531E1B3DA61500A89EF1 /* VSPMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BE531D1B3DA61500A89EF1 /* VSPMasterViewController.m */; };
 		01BE53241B3DA61500A89EF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01BE53221B3DA61500A89EF1 /* Main.storyboard */; };
 		01BE53261B3DA61500A89EF1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01BE53251B3DA61500A89EF1 /* Images.xcassets */; };
 		01BE53291B3DA61500A89EF1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01BE53271B3DA61500A89EF1 /* LaunchScreen.xib */; };
 		01BE53351B3DA61500A89EF1 /* BogusCodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BE53341B3DA61500A89EF1 /* BogusCodeTests.m */; };
 		D9DDB5701CFE3A640010FEA4 /* VSPVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = D9DDB56F1CFE3A640010FEA4 /* VSPVideo.m */; };
 		D9DDB5741CFE3C250010FEA4 /* VSPAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D9DDB5731CFE3C250010FEA4 /* VSPAPIManager.m */; };
-		D9DDB5781CFE3C570010FEA4 /* NSPNetworkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D9DDB5771CFE3C570010FEA4 /* NSPNetworkModel.m */; };
+		D9DDB5781CFE3C570010FEA4 /* VSPNetworkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D9DDB5771CFE3C570010FEA4 /* VSPNetworkModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,8 +35,8 @@
 		01BE53171B3DA61500A89EF1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		01BE53191B3DA61500A89EF1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		01BE531A1B3DA61500A89EF1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		01BE531C1B3DA61500A89EF1 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		01BE531D1B3DA61500A89EF1 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		01BE531C1B3DA61500A89EF1 /* VSPMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VSPMasterViewController.h; sourceTree = "<group>"; };
+		01BE531D1B3DA61500A89EF1 /* VSPMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VSPMasterViewController.m; sourceTree = "<group>"; };
 		01BE53231B3DA61500A89EF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		01BE53251B3DA61500A89EF1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		01BE53281B3DA61500A89EF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -47,8 +47,8 @@
 		D9DDB56F1CFE3A640010FEA4 /* VSPVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSPVideo.m; sourceTree = "<group>"; };
 		D9DDB5721CFE3C250010FEA4 /* VSPAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSPAPIManager.h; sourceTree = "<group>"; };
 		D9DDB5731CFE3C250010FEA4 /* VSPAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSPAPIManager.m; sourceTree = "<group>"; };
-		D9DDB5761CFE3C570010FEA4 /* NSPNetworkModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSPNetworkModel.h; sourceTree = "<group>"; };
-		D9DDB5771CFE3C570010FEA4 /* NSPNetworkModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSPNetworkModel.m; sourceTree = "<group>"; };
+		D9DDB5761CFE3C570010FEA4 /* VSPNetworkModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSPNetworkModel.h; sourceTree = "<group>"; };
+		D9DDB5771CFE3C570010FEA4 /* VSPNetworkModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSPNetworkModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,8 +132,8 @@
 		D9DDB56D1CFE3A320010FEA4 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				01BE531C1B3DA61500A89EF1 /* MasterViewController.h */,
-				01BE531D1B3DA61500A89EF1 /* MasterViewController.m */,
+				01BE531C1B3DA61500A89EF1 /* VSPMasterViewController.h */,
+				01BE531D1B3DA61500A89EF1 /* VSPMasterViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -152,8 +152,8 @@
 			children = (
 				D9DDB5721CFE3C250010FEA4 /* VSPAPIManager.h */,
 				D9DDB5731CFE3C250010FEA4 /* VSPAPIManager.m */,
-				D9DDB5761CFE3C570010FEA4 /* NSPNetworkModel.h */,
-				D9DDB5771CFE3C570010FEA4 /* NSPNetworkModel.m */,
+				D9DDB5761CFE3C570010FEA4 /* VSPNetworkModel.h */,
+				D9DDB5771CFE3C570010FEA4 /* VSPNetworkModel.m */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -202,7 +202,7 @@
 		01BE530A1B3DA61500A89EF1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = Vimeo;
 				TargetAttributes = {
 					01BE53111B3DA61500A89EF1 = {
@@ -261,8 +261,8 @@
 				01BE531B1B3DA61500A89EF1 /* AppDelegate.m in Sources */,
 				D9DDB5701CFE3A640010FEA4 /* VSPVideo.m in Sources */,
 				D9DDB5741CFE3C250010FEA4 /* VSPAPIManager.m in Sources */,
-				01BE531E1B3DA61500A89EF1 /* MasterViewController.m in Sources */,
-				D9DDB5781CFE3C570010FEA4 /* NSPNetworkModel.m in Sources */,
+				01BE531E1B3DA61500A89EF1 /* VSPMasterViewController.m in Sources */,
+				D9DDB5781CFE3C570010FEA4 /* VSPNetworkModel.m in Sources */,
 				01BE53181B3DA61500A89EF1 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,6 +326,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -392,6 +393,7 @@
 				INFOPLIST_FILE = BogusCode/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vimeo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -403,6 +405,7 @@
 				INFOPLIST_FILE = BogusCode/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vimeo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -421,6 +424,7 @@
 				);
 				INFOPLIST_FILE = BogusCodeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vimeo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BogusCode.app/BogusCode";
 			};
@@ -436,6 +440,7 @@
 				);
 				INFOPLIST_FILE = BogusCodeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vimeo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BogusCode.app/BogusCode";
 			};

@@ -10,4 +10,8 @@
 
 @interface VSPAPIManager : NSObject
 
++ (VSPAPIManager *)sharedAPIManager;
+
+- (void)getVimeoStaffPicksVideosWithOffset:(NSUInteger)offset andReturnJSON:(void(^)(id json, NSError *error))completion;
+
 @end
