@@ -9,6 +9,8 @@
 #import "VSPMasterViewController.h"
 #import "VSPNetworkModel.h"
 #import "VSPVideo.h"
+#import "VSPDetailViewController.h"
+#import "VSPPlayVideoViewController.h"
 
 
 #define kOneConstant 1
@@ -64,13 +66,7 @@
 }
 
 
-#pragma mark TableViewDelegate methods
-
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 100;
-}
+#pragma mark TableViewDataSource methods
 
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -107,6 +103,25 @@
     }
 
     return cell;
+}
+
+
+#pragma mark TableViewDelegate methods
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 100;
+}
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    VSPDetailViewController *detailVC = [self.storyboard instantiateViewControllerWithIdentifier:@"VSPDetailViewController"];
+    
+    detailVC.video = self.videos[indexPath.row];
+    
+    [self.navigationController pushViewController:detailVC animated:YES];
 }
 
 

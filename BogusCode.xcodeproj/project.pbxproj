@@ -14,9 +14,12 @@
 		01BE53261B3DA61500A89EF1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01BE53251B3DA61500A89EF1 /* Images.xcassets */; };
 		01BE53291B3DA61500A89EF1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01BE53271B3DA61500A89EF1 /* LaunchScreen.xib */; };
 		01BE53351B3DA61500A89EF1 /* BogusCodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BE53341B3DA61500A89EF1 /* BogusCodeTests.m */; };
+		D9ABE8F11D064FC0007ADD76 /* videoEmbed.html in Resources */ = {isa = PBXBuildFile; fileRef = D9ABE8F01D064FC0007ADD76 /* videoEmbed.html */; };
 		D9DDB5701CFE3A640010FEA4 /* VSPVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = D9DDB56F1CFE3A640010FEA4 /* VSPVideo.m */; };
 		D9DDB5741CFE3C250010FEA4 /* VSPAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D9DDB5731CFE3C250010FEA4 /* VSPAPIManager.m */; };
 		D9DDB5781CFE3C570010FEA4 /* VSPNetworkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D9DDB5771CFE3C570010FEA4 /* VSPNetworkModel.m */; };
+		D9DDB57B1D005D4B0010FEA4 /* VSPDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9DDB57A1D005D4B0010FEA4 /* VSPDetailViewController.m */; };
+		D9DDB57E1D0123550010FEA4 /* VSPPlayVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9DDB57D1D0123550010FEA4 /* VSPPlayVideoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,12 +46,17 @@
 		01BE532E1B3DA61500A89EF1 /* BogusCodeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BogusCodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01BE53331B3DA61500A89EF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01BE53341B3DA61500A89EF1 /* BogusCodeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BogusCodeTests.m; sourceTree = "<group>"; };
+		D9ABE8F01D064FC0007ADD76 /* videoEmbed.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = videoEmbed.html; sourceTree = "<group>"; };
 		D9DDB56E1CFE3A640010FEA4 /* VSPVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSPVideo.h; sourceTree = "<group>"; };
 		D9DDB56F1CFE3A640010FEA4 /* VSPVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSPVideo.m; sourceTree = "<group>"; };
 		D9DDB5721CFE3C250010FEA4 /* VSPAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSPAPIManager.h; sourceTree = "<group>"; };
 		D9DDB5731CFE3C250010FEA4 /* VSPAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSPAPIManager.m; sourceTree = "<group>"; };
 		D9DDB5761CFE3C570010FEA4 /* VSPNetworkModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSPNetworkModel.h; sourceTree = "<group>"; };
 		D9DDB5771CFE3C570010FEA4 /* VSPNetworkModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSPNetworkModel.m; sourceTree = "<group>"; };
+		D9DDB5791D005D4B0010FEA4 /* VSPDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSPDetailViewController.h; sourceTree = "<group>"; };
+		D9DDB57A1D005D4B0010FEA4 /* VSPDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSPDetailViewController.m; sourceTree = "<group>"; };
+		D9DDB57C1D0123550010FEA4 /* VSPPlayVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSPPlayVideoViewController.h; sourceTree = "<group>"; };
+		D9DDB57D1D0123550010FEA4 /* VSPPlayVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSPPlayVideoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +98,7 @@
 		01BE53141B3DA61500A89EF1 /* BogusCode */ = {
 			isa = PBXGroup;
 			children = (
+				D9ABE8F01D064FC0007ADD76 /* videoEmbed.html */,
 				01BE53191B3DA61500A89EF1 /* AppDelegate.h */,
 				01BE531A1B3DA61500A89EF1 /* AppDelegate.m */,
 				D9DDB5711CFE3AC30010FEA4 /* Model */,
@@ -134,6 +143,10 @@
 			children = (
 				01BE531C1B3DA61500A89EF1 /* VSPMasterViewController.h */,
 				01BE531D1B3DA61500A89EF1 /* VSPMasterViewController.m */,
+				D9DDB57C1D0123550010FEA4 /* VSPPlayVideoViewController.h */,
+				D9DDB57D1D0123550010FEA4 /* VSPPlayVideoViewController.m */,
+				D9DDB5791D005D4B0010FEA4 /* VSPDetailViewController.h */,
+				D9DDB57A1D005D4B0010FEA4 /* VSPDetailViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -240,6 +253,7 @@
 			files = (
 				01BE53241B3DA61500A89EF1 /* Main.storyboard in Resources */,
 				01BE53291B3DA61500A89EF1 /* LaunchScreen.xib in Resources */,
+				D9ABE8F11D064FC0007ADD76 /* videoEmbed.html in Resources */,
 				01BE53261B3DA61500A89EF1 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,7 +276,9 @@
 				D9DDB5701CFE3A640010FEA4 /* VSPVideo.m in Sources */,
 				D9DDB5741CFE3C250010FEA4 /* VSPAPIManager.m in Sources */,
 				01BE531E1B3DA61500A89EF1 /* VSPMasterViewController.m in Sources */,
+				D9DDB57E1D0123550010FEA4 /* VSPPlayVideoViewController.m in Sources */,
 				D9DDB5781CFE3C570010FEA4 /* VSPNetworkModel.m in Sources */,
+				D9DDB57B1D005D4B0010FEA4 /* VSPDetailViewController.m in Sources */,
 				01BE53181B3DA61500A89EF1 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

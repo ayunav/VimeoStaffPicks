@@ -41,7 +41,6 @@
                                                    completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error)
                                                        {
                                                            NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-                                                           //NSLog(@"%@", jsonDict);
                                                            
                                                            completion(jsonDict, nil);
                                                        }];

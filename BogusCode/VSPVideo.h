@@ -12,7 +12,7 @@
 
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *imageURLlink;
+@property (nonatomic, strong) NSString *videoLink;
 @property (nonatomic, strong) NSString *videoDescription;
-
 
 @end

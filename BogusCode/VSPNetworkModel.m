@@ -41,6 +41,7 @@
             video.name = dictionary[@"name"];
             video.videoDescription = dictionary[@"description"];
             video.imageURLlink = [[[[dictionary valueForKey:@"pictures"] valueForKey:@"sizes"] objectAtIndex:0] valueForKey:@"link"];
+            video.videoLink = dictionary[@"embed"][@"html"];
             
             [vimeoStaffPicksVideos addObject:video];
         }
