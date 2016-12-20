@@ -220,6 +220,7 @@
 				TargetAttributes = {
 					01BE53111B3DA61500A89EF1 = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = N48NM3R37Q;
 					};
 					01BE532D1B3DA61500A89EF1 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -406,6 +407,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = N48NM3R37Q;
 				INFOPLIST_FILE = BogusCode/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -418,6 +420,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = N48NM3R37Q;
 				INFOPLIST_FILE = BogusCode/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
